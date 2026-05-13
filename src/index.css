@@ -1,0 +1,95 @@
+@import url('https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@300;400;600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --color-on-surface-variant: #d0c5af;
+  --color-outline: #99907c;
+  --color-primary: #c99b3b;
+  --color-primary-light: #f6d98b;
+  --color-primary-dark: #d8b764;
+  --color-surface: #050505;
+  --color-background: #030303;
+  
+  --font-sans: "Hanken Grotesk", ui-sans-serif, system-ui, sans-serif;
+  --font-serif: "Playfair Display", ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
+
+  --spacing-container-max: 1440px;
+  --spacing-section-gap: 160px;
+  --spacing-margin-desktop: 80px;
+  --spacing-margin-mobile: 24px;
+}
+
+@layer utilities {
+  .gold-gradient-text {
+    background: linear-gradient(to right, #c99b3b, #f6d98b, #d8b764, #c99b3b);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+}
+
+body {
+  @apply bg-background text-[#f5f5f5] antialiased overflow-x-hidden;
+  background-color: #030303;
+}
+
+.luxury-overlay {
+  position: absolute;
+  inset: 0;
+  background-image: url("https://www.transparenttextures.com/patterns/black-paper.png");
+  opacity: 0.15;
+  pointer-events: none;
+  z-index: 10;
+}
+
+.grain {
+  position: fixed;
+  top: -100%;
+  left: -100%;
+  width: 300%;
+  height: 300%;
+  background-image: url("https://www.transparenttextures.com/patterns/asfalt-light.png");
+  opacity: 0.04;
+  pointer-events: none;
+  z-index: 100;
+  animation: noise 8s steps(10) infinite;
+}
+
+@keyframes noise {
+  0% { transform: translate(0, 0); }
+  10% { transform: translate(-1%, -1%); }
+  20% { transform: translate(-2%, 1%); }
+  30% { transform: translate(1%, -2%); }
+  40% { transform: translate(-1%, 2%); }
+  50% { transform: translate(-2%, 1%); }
+  60% { transform: translate(2%, 0); }
+  70% { transform: translate(0, 2%); }
+  80% { transform: translate(-2%, 0); }
+  90% { transform: translate(1%, 1%); }
+  100% { transform: translate(1%, 0); }
+}
+
+.ornamental-border {
+  position: fixed;
+  top: 16px;
+  left: 16px;
+  right: 16px;
+  bottom: 16px;
+  border: 1px solid rgba(201, 155, 59, 0.2);
+  pointer-events: none;
+  z-index: 40;
+}
+
+.ornamental-corner {
+  position: fixed;
+  width: 8px;
+  height: 8px;
+  background: #c99b3b;
+  border-radius: 50%;
+  z-index: 45;
+}
+
+.top-left { top: 12px; left: 12px; }
+.top-right { top: 12px; right: 12px; }
+.bottom-left { bottom: 12px; left: 12px; }
+.bottom-right { bottom: 12px; right: 12px; }
