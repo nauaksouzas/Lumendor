@@ -1,20 +1,40 @@
-<div align="center">
-<img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
-</div>
+# Lumen d'Or — V2
 
-# Run and deploy your AI Studio app
+Editorial storefront for Lumen d'Or, featuring **Le Cavalier** and **La Signature**.
 
-This contains everything you need to run your app locally.
+## Current commerce flow
 
-View your app in AI Studio: https://ai.studio/apps/4afe7b4d-c009-4f62-8958-8f0c34d54f2c
+Purchases are intentionally routed through the Lumen d'Or WhatsApp concierge at **+1 (774) 270-7460**. Product CTAs prefill the relevant order message so the customer can continue directly with a human.
 
-## Run Locally
+## Stack
 
-**Prerequisites:**  Node.js
+- React 19
+- TypeScript
+- Vite
+- Tailwind CSS 4
+- Lucide icons
 
+## Run locally
 
-1. Install dependencies:
-   `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
-3. Run the app:
-   `npm run dev`
+```bash
+npm install
+npm run dev
+```
+
+## Quality checks
+
+```bash
+npm run lint
+npm run build
+```
+
+## V2 scope
+
+- Responsive editorial luxury layout
+- Le Cavalier and La Signature product presentation
+- Product-specific WhatsApp purchase links
+- Mobile sticky WhatsApp ordering CTA
+- Updated SEO and social metadata
+- Reduced-motion accessibility support
+
+Official product photography can be added to the existing edition surfaces without changing the purchase flow or page architecture.
